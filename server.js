@@ -1,10 +1,14 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const fs = require("fs");
+const PORT = process.env.PORT || 9000;
 
 let usStates = require("./usStates.json");
 
 const app = express();
+const cors = require("cors");
+app.use(cors());
+
 
 const save = () => {
   fs.writeFile(
@@ -76,6 +80,6 @@ app.delete("/states/:name", (req, res) => {
   });
 });
 
-app.listen(9000, () => {
-  console.log(`Array of  States at http://localhost:9000`);
+app.listen(PORT, () => {
+  console.log(`Array of  States at http://localhost:{$PORT}`);
 });
