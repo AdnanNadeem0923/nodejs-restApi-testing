@@ -1,7 +1,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const fs = require("fs");
-const hostname ='0.0.0.0';
+const hostname ='0.0.0.0'; //hostname 
 const PORT = process.env.PORT || 9000;
 
 let usStates = require("./usStates.json");
