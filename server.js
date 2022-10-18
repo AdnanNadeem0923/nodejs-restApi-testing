@@ -1,6 +1,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const fs = require("fs");
+const hostname ='0.0.0.0';
 const PORT = process.env.PORT || 9000;
 
 let usStates = require("./usStates.json");
@@ -81,6 +82,6 @@ app.delete("/states/:name", (req, res) => {
   });
 });
 
-app.listen(PORT, '0.0.0.0',() => {
+app.listen(PORT, hostname,() => {
   console.log(`Array of  States at http://localhost:{$PORT}`);
 });
