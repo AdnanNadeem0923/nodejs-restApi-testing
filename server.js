@@ -81,6 +81,6 @@ app.delete("/states/:name", (req, res) => {
   });
 });
 
-app.listen(PORT, () => {
+app.listen(PORT, '0.0.0.0',() => {
   console.log(`Array of  States at http://localhost:{$PORT}`);
 });
