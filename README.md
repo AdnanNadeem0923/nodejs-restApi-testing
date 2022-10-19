@@ -8,4 +8,4 @@ Clone this repository
  
  Test cases are written in the file server-routes-test//
  Check server.js file for the rest api's//
- No actual database is used instead usStates.js file stores and writes the data modified by the push/post/patch/delete updates
+ No actual database is used instead usStates.js file stores and writes the data modified by the push/post/patch/delete updates//
