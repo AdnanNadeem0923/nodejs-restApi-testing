@@ -24,6 +24,7 @@ const save = () => {
   );
 };
 
+
 app.get("/states", (req, res) => {
   res.json(usStates);
 });
@@ -36,10 +37,7 @@ app.get("/states/:name", (req, res) => {
     res.json(findState);
   }
 
-  //   const foundState = usStates.find((state) => state.state === req.params.name);
-  //   if (!foundState) {
-  //     res.status(404).send(" state with that name was not found");
-  //   }
+  
 });
 
 app.post("/states", bodyParser.json(), async(req, res) => {
@@ -52,10 +50,7 @@ app.post("/states", bodyParser.json(), async(req, res) => {
 });
 
 app.put("/states/:name", bodyParser.json(), (req, res) => {
-  //   const foundState = usStates.find((state) => state.state === req.params.name);
-  //   if (!foundState) {
-  //     res.status(404).send(" state with that name was not found");
-  //   } else {
+
   usStates = usStates.map((state) => {
     if (state.state === req.params.name) {
       return req.body;
