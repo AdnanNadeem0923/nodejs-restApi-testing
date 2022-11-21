@@ -1,5 +1,5 @@
 # nodejs-restApi-testing
-A Full Stack App
+A Full Stack App.
 This is the simple Express rest Api's project with test cases.
 Clone this repository 
  - git clone URL
